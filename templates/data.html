@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container data-page" id="data">
+    <div class="d-flex ">
+        <div class="table">
+            <table class="table-data">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        {% for head in headers %}
+                        <th>{{ head }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        {% for cell in row %}
+                        <td>{{ cell }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="align-left">
+            <h1 class="title-1">Data Yang Digunakan 📊</h1>
+            <h5 class="text-2">
+                diambil dari kaagle (<span><a
+                        href="https://www.kaggle.com/datasets/rxnach/student-stress-factors-a-comprehensive-analysis/data"
+                        target="_blank">link</a></span>), dengan jumlah 1100 data dan 20 feature.
+                Algoritma yang digunakan untuk membuat model prediksi adalah <b>Random Forest</b>.
+                Pada tahap preprocessing dilakukan proses imputasi dan scaling.
+            </h5>
+        </div>
+    </div>
+</div>
+{% endblock %}

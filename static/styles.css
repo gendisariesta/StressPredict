@@ -1,0 +1,212 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a, 
+label {
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    margin: 2rem 1.5rem;
+    align-items: center;
+}
+
+.title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 56px;
+    margin: 1rem;
+}
+.title-1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 64px;
+    margin: 0 1rem;
+    text-align: left;
+}
+.text-1 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 45px;
+    margin: 1rem;
+    width: 650px;
+    text-align: left;
+}
+.text-2{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 2rem 1rem;
+    text-align: justify;
+}
+.text {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 1rem;
+}
+
+.container {
+    margin: 2rem;
+    height: 100vh;
+    text-align: center;
+}
+.second-page{
+    align-content: center;
+}
+
+.data-page{
+    max-height: fit-content;
+    align-content: center;
+    margin-top: 4rem;
+}
+.visual-page{
+    height: fit-content!important;
+}
+.d-flex {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.img-logo {
+    width: 90px;
+}
+
+.nav {
+    background-color: black;
+    margin: 10px;
+    text-align: center;
+    width: 270px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    position: absolute;
+    justify-self: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-inline: 10px;
+}
+
+.btn-arrow {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    animation: bounce 1s infinite;
+}
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translate(0%, 0);
+    }
+    50% {
+        transform: translate(0%, 10px);
+    }
+}
+
+.img-stress {
+    width: 375px;
+    margin-bottom: 1rem;
+}
+.img-stress-1{
+    width: 400px;
+    margin-top: 1rem;
+}
+
+.bg-first {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    justify-self: anchor-center;
+    top: 0;
+}
+.form{
+    background-color: black;
+    border-radius: 30px;
+    width: 500px;
+    height: 420px;
+    color: white;
+    padding: 2rem;
+    text-align: left;
+}
+.form label{
+    font-size: 24px;
+    line-height: 45px;
+}
+.form select{
+    width: 180px;
+    font-size: 16px;
+    padding: 5px;
+    float: right;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+.btn-submit{
+    background-color: #2383e2;
+    width: 100%;
+    height: 35px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-submit:hover{
+    background-color: white;
+    color: #2383e2;
+    border: 2px #2383e2;
+}
+.align-left{
+    text-align: left;
+}
+.table{
+    width: 700px;
+    height: 420px;
+    text-align: center;
+    margin-right: 2rem;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+}
+.table-data tr{
+    box-shadow: 0 0 0 1px black; /* simulate row border */
+}
+.table-data th{
+    background-color: black;
+    color: white;
+    padding-inline: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.visual{
+    background-color: black;
+    border-radius: 30px;
+    width: fit-content;
+    height: 500px;
+    color: white;
+    padding: 1rem 2rem;
+    text-align: left;
+    justify-self:center
+}
+.text-visual{
+    margin: 0 0 0.5rem 0;
+    text-align: center
+}
+.img-visual{
+    height: 450px!important;
+}
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}

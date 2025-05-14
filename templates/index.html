@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+  {% block content %}
+      <img src="/img/bg-first.png" alt="" class="bg-first">
+    <div class="container first-page" id="home">
+        <h1 class="title">Stress Level (edisi pelajar)</h1>
+        <h5 class="text">Ayo cek level stress mu!</h5>
+        <div>
+            <img src="img/img-stress.gif" alt="" class="img-stress">
+        </div>
+        <a href="#second" class="btn-next"><button id="btn-arrow" class="btn-arrow"><img src="/img/arrow.png" alt=""
+                    width="25"></button></a>
+    </div>
+    <div class="container second-page" id="second">
+        <div class="d-flex ">
+            <div class="align-left">
+                <h1 class="title-1">Seberapa stres kamu?</h1>
+                <h5 class="text-1">Isi form ini dan temukan jawabannya!📝</h5>
+                <img src="img/img-stress-1.gif" alt="" class="img-stress-1">
+            </div>
+            <div class="form">
+                <form action="/" method="post">
+                    <label>Kualitas Tidur</label>
+                    <select name="sleep_quality">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <br>
+                    <label>Performa Nilai</label><select name="academic_performance">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <label>Beban Studi</label><select name="study_load">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <label>Hubungan dengan Guru</label><select name="teacher_student_relationship">
+                       <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <label>Kekhawatiran Karir</label><select name="future_career_concerns">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <label>Dukungan Sosial</label><select name="social_support">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select><br>
+                    <label>Tekanan Sosial</label><select name="peer_pressure">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <label>Bullying</label><select name="bullying">
+                        <option value="">-- Pilih Tingkatan --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br>
+                    <br>
+                    <!-- <a href="#third" class="btn-next"> -->
+                        <button type="submit" class="btn-submit" id="btn-submit">Prediksi</button>
+                    <!-- </a> -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container second-page" id="third" {% if prediction %} {% else %}hidden{% endif %}>
+        <h5 class="text">Ini hasilnya</h5>
+        {% if prediction %}
+        <h2>Level Stress Kamu: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+    {% endblock %}
