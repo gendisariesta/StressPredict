@@ -9,7 +9,6 @@ from sklearn.metrics import confusion_matrix
 
 app = Flask(__name__, template_folder = 'templates', static_folder = 'static', static_url_path = '/')
 
-# Load model & preprocessor
 model = joblib.load("stress_model.pkl")
 preprocessor = joblib.load("preprocessor.pkl")
 
